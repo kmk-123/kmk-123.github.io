@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>김만기 — 개발자 포트폴리오</title>
+  <meta name="description" content="사용자 경험을 고민하는 개발자 김만기의 포트폴리오" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__logo">김만기<span>.</span></a>
+      <nav>
+        <ul class="nav__links">
+          <li><a href="#about">소개</a></li>
+          <li><a href="#skills">기술</a></li>
+          <li><a href="#projects">프로젝트</a></li>
+          <li><a href="#experience">활동</a></li>
+          <li><a href="#contact">연락처</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="다크 모드 전환">◐</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero container">
+      <p class="hero__eyebrow">Full-stack · Web &amp; Mobile Developer</p>
+      <h1 class="hero__title">
+        실시간 데이터와 AI를<br />
+        <span class="accent">쓸 수 있는 서비스</span>로 만드는<br />
+        개발자 김만기입니다.
+      </h1>
+      <p class="hero__desc">
+        주식 모의투자 웹 서비스와 레시피 추천 Android 앱을 팀으로 만들며
+        프론트엔드부터 백엔드, 배포 자동화까지 직접 맡아 왔습니다.
+      </p>
+      <div class="hero__cta">
+        <a href="#projects" class="btn btn--primary">프로젝트 보기</a>
+        <a href="#contact" class="btn btn--ghost">연락하기</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section container reveal">
+      <h2 class="section__title"><span>01</span> 소개</h2>
+      <div class="about">
+        <div class="about__text">
+          <p>
+            안녕하세요! 저는 <strong>외부 API와 실시간 데이터를 다루는 서비스</strong>를 좋아하는 개발자입니다.
+            증권사 API의 실시간 호가로 주문을 체결하고, 여러 AI 모델로 뉴스를 분석해
+            사용자에게 보여주는 기능을 직접 설계하고 구현했습니다.
+          </p>
+          <p>
+            화면만 만드는 데서 멈추지 않고, 느린 부분은 캐시와 번들 최적화로 개선하고
+            반복되는 빌드·배포는 GitHub Actions로 자동화하는 등
+            <strong>서비스가 끝까지 잘 돌아가게 만드는 일</strong>에 관심이 많습니다.
+          </p>
+        </div>
+        <ul class="about__facts">
+          <li><span>주력</span>React · TypeScript · FastAPI</li>
+          <li><span>관심사</span>실시간 데이터, AI 연동, 성능 최적화</li>
+          <li><span>현재</span>새로운 기회를 찾는 중</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section container reveal">
+      <h2 class="section__title"><span>02</span> 기술 스택</h2>
+      <div class="skills">
+        <div class="skills__group">
+          <h3>Frontend</h3>
+          <ul class="tags">
+            <li>JavaScript</li><li>TypeScript</li><li>React</li><li>Vite</li><li>HTML/CSS</li>
+          </ul>
+        </div>
+        <div class="skills__group">
+          <h3>Mobile</h3>
+          <ul class="tags">
+            <li>React Native</li><li>Expo</li><li>Android (Gradle)</li>
+          </ul>
+        </div>
+        <div class="skills__group">
+          <h3>Backend</h3>
+          <ul class="tags">
+            <li>Python FastAPI</li><li>Node.js</li><li>Express</li><li>PostgreSQL</li><li>Firebase Auth</li>
+          </ul>
+        </div>
+        <div class="skills__group">
+          <h3>Infra · AI · Tools</h3>
+          <ul class="tags">
+            <li>AWS EC2 · Lambda</li><li>GitHub Actions</li><li>Git</li><li>LLM API (Claude · Gemini · CLOVA)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section container reveal">
+      <h2 class="section__title"><span>03</span> 프로젝트</h2>
+      <div class="filters" role="tablist">
+        <button class="filter is-active" data-filter="all">전체</button>
+        <button class="filter" data-filter="web">웹</button>
+        <button class="filter" data-filter="mobile">모바일</button>
+      </div>
+      <div class="projects">
+        <article class="card" data-category="web">
+          <div class="card__thumb" style="--hue: 220">📈</div>
+          <div class="card__body">
+            <p class="card__meta">팀 프로젝트 · 2026.09 — 2026.11 · 웹</p>
+            <h3>모이고 (Moigo)</h3>
+            <p>AI 뉴스 분석 기반 국내 주식 모의투자 웹 서비스. 실시간 시세·호가로 주문을 체결하고, 여러 AI 모델이 뉴스를 분석해 종목 인사이트를 제공합니다.</p>
+            <ul class="card__role">
+              <li>토스증권 Open API 연동: 실시간 호가·시세 표시, 호가 기반 주문 체결과 미체결 지정가 주문 처리</li>
+              <li>가격 데이터를 백그라운드에서 동기화하는 캐시 테이블 설계로 외부 API 호출 부담 감소</li>
+              <li>뉴스 탭: 여러 언론사가 다룬 핵심 이슈를 묶고 AI가 판단한 호재/악재 배지 표시</li>
+              <li>커뮤니티 피드(글·좋아요·댓글), Firebase Google 로그인 + JWT 인증</li>
+              <li>첫 화면 번들 축소, 이벤트 루프 블로킹·중복 체결 버그 수정 등 성능·안정성 개선</li>
+            </ul>
+            <ul class="tags tags--sm"><li>React</li><li>TypeScript</li><li>Vite</li><li>FastAPI</li><li>PostgreSQL</li><li>Firebase</li><li>LLM API</li></ul>
+            <div class="card__links">
+              <a href="https://github.com/puri0822-new/moigo" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="mobile">
+          <div class="card__thumb" style="--hue: 140">🥬</div>
+          <div class="card__body">
+            <p class="card__meta">팀 프로젝트 · 2026.03 — 2026.06 · Android</p>
+            <h3>요리조리</h3>
+            <p>냉장고 속 재료를 관리하고, 가진 재료로 만들 수 있는 요리를 추천해주는 Android 앱. AI 채팅으로 레시피를 물어볼 수 있습니다.</p>
+            <ul class="card__role">
+              <li>냉장고 재료 선택 → 레시피 찾기 기능, 유통기한이 지난 재료는 추천에서 자동 제외</li>
+              <li>레시피에 사용한 재료를 골라 냉장고에서 차감하고 탭 간 상태 즉시 동기화</li>
+              <li>AI 채팅 기록 저장 및 로그인 동기화, 닉네임 설정</li>
+              <li>GitHub Actions로 APK 빌드 → GitHub Releases 자동 배포 파이프라인 구축</li>
+            </ul>
+            <ul class="tags tags--sm"><li>React Native</li><li>Expo</li><li>Node.js</li><li>Express</li><li>AWS EC2 · Lambda</li><li>GitHub Actions</li></ul>
+            <div class="card__links">
+              <a href="https://github.com/puri0822/FRAME_-" target="_blank" rel="noopener">GitHub ↗</a>
+              <a href="https://github.com/puri0822/FRAME_-/releases/latest" target="_blank" rel="noopener">APK 다운로드 ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section container reveal">
+      <h2 class="section__title"><span>04</span> 교육 & 활동</h2>
+      <ol class="timeline">
+        <li>
+          <time>2026.09 — 2026.11</time>
+          <div>
+            <h3>모이고 (Moigo) · 팀 프로젝트</h3>
+            <p>AI 뉴스 분석 기반 주식 모의투자 웹 서비스 개발 (React · FastAPI)</p>
+          </div>
+        </li>
+        <li>
+          <time>2026.03 — 2026.06</time>
+          <div>
+            <h3>요리조리 · 팀 프로젝트</h3>
+            <p>냉장고 재료 기반 레시피 추천 Android 앱 개발 (React Native · AWS)</p>
+          </div>
+        </li>
+        <li>
+          <time>학력</time>
+          <div>
+            <h3>신구대학교 · 컴퓨터소프트웨어과</h3>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section container reveal contact">
+      <h2 class="section__title"><span>05</span> 연락처</h2>
+      <p class="contact__lead">함께 일하고 싶으시거나 궁금한 점이 있다면 편하게 연락 주세요.</p>
+      <a class="contact__email" href="mailto:manki2003@gmail.com">manki2003@gmail.com</a>
+      <ul class="contact__links">
+        <li><a href="https://github.com/kmk-123" target="_blank" rel="noopener">GitHub ↗</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p>© <span id="year"></span> 김만기. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

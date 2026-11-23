@@ -130,9 +130,48 @@ h1, h2, h3 { margin: 0; line-height: 1.3; }
 .card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08); }
 .card.is-hidden { display: none; }
 .card__thumb {
-  aspect-ratio: 16 / 7; display: grid; place-items: center; font-size: 3rem;
-  background: linear-gradient(135deg, hsl(var(--hue) 70% 92%), hsl(calc(var(--hue) + 40) 70% 85%));
+  aspect-ratio: 16 / 9; position: relative; overflow: hidden;
+  display: grid; place-items: center;
 }
+.card__thumb img { display: block; transition: transform 0.4s ease; }
+
+/* 웹 프로젝트: 브라우저 창 목업 */
+.thumb--web {
+  background: linear-gradient(135deg, #dfe7ff 0%, #c7d4ff 55%, #b6c6ff 100%);
+  place-items: end center;
+}
+.browser {
+  width: 88%; height: 82%;
+  background: #fff; border-radius: 10px 10px 0 0; overflow: hidden;
+  box-shadow: 0 -6px 30px rgba(30, 50, 140, 0.18);
+  display: flex; flex-direction: column;
+  transform: translateY(6px); transition: transform 0.4s ease;
+}
+.browser__bar {
+  height: 22px; flex: none; display: flex; align-items: center; gap: 5px;
+  padding: 0 10px; background: #f1f2f5; border-bottom: 1px solid #e4e6eb;
+}
+.browser__bar i { width: 7px; height: 7px; border-radius: 50%; background: #d6d8de; }
+.browser__bar i:nth-child(1) { background: #ff6159; }
+.browser__bar i:nth-child(2) { background: #ffbd2e; }
+.browser__bar i:nth-child(3) { background: #28c941; }
+.browser__bar span { margin-left: 8px; font-size: 10px; color: #8a8f99; }
+.browser__view { flex: 1; min-height: 0; overflow: hidden; }
+.browser__view img { width: 175%; max-width: none; height: auto; }
+.card:hover .browser { transform: translateY(0); }
+
+/* 모바일 앱: 앱 아이콘 */
+.thumb--app {
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.7), transparent 55%),
+    linear-gradient(135deg, #ffe2c4 0%, #f3ecc0 50%, #cdeeb4 100%);
+}
+.thumb--app img {
+  position: absolute; inset: 0; margin: auto;
+  height: 80%; width: auto;
+  filter: drop-shadow(0 12px 20px rgba(120, 90, 20, 0.22));
+}
+.card:hover .thumb--app img { transform: scale(1.05) rotate(-2deg); }
 .card__body { padding: 22px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
 .card__body h3 { font-size: 1.15rem; }
 .card__body p { margin: 0; color: var(--text-muted); font-size: 0.95rem; }
